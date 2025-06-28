@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TimeVerse</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <header id="navbar">
+        <a href="index.html" class="logo" id="home-logo">
+            <img src="images/ChatGPT Image Jun 12, 2025, 11_47_57 AM.png" alt="TimeVerse Logo" class="header-logo">
+            TimeVerse
+        </a>
+        <nav>
+    <a href="index.html#hero">Home</a>
+    <a href="index.html#catalog">Catalog</a>
+    <a href="watches.html">Watches</a>
+    <a href="index.html#about">About</a>
+    <a href="index.html#contact">Contact</a>
+    <button id="admin-login-btn" type="button" title="Admin Login">Admin</button>
+    <button id="theme-toggle" title="Toggle dark/light mode">🌙</button>
+</nav>
+        <div class="menu-icon" onclick="toggleMenu()">☰</div>
+    </header>
+
+    <section id="hero">
+        <div class="hero-content">
+            <h1>Get the <span class="highlight">Luxury Look</span> for Less</h1>
+            <p><b>Order exact replicas of your favorite luxury watches, or request any model you desire.<br>
+                </b></p>
+            <a href="#catalog" class="hero-btn">Browse Collection</a>
+        </div>
+    </section>
+
+    <!-- Moving text/marquee above search bar -->
+    <div class="marquee-container">
+        <div class="marquee">
+            <a href="https://instagram.com/timeverse_official" target="_blank" class="marquee-link">
+                If your watch is not available, send us a picture of your dream watch.
+            </a>
+            <span>Find your dream watch with us at TimeVerse</span>
+            
+            <span>TimeVerse: Where Luxury Meets Affordability</span>
+        </div>
+    </div>
+
+
+    <!-- SEARCH BAR ONLY ON HOME PAGE -->
+    <div class="searchbar-container">
+        <input type="text" id="responsive-search" class="responsive-search" placeholder="Search...">
+        <button type="button" class="search-btn" aria-label="Search">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#888" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="11" cy="11" r="8" />
+                <line x1="21" y1="21" x2="16.65" y2="16.65" />
+            </svg>
+        </button>
+    </div>
+
+    <section id="catalog" class="fade-in">
+        <div class="catalog-header">
+            <h2>Featured Collection</h2>
+        </div>
+        <div class="product-grid" id="featured-grid"></div>
+    </section>
+
+    <hr class="section-divider">
+
+    <section class="duo-box-section fade-in">
+        <div class="duo-boxes">
+            <div class="duo-box">
+                <h3>If your watch is not available</h3>
+                <p>Send a picture of your watch.<br>
+                   We will make it available for you!</p>
+                <a href="https://instagram.com/timeverse_official" target="_blank" class="ig-btn">
+                    <span>Send on Instagram</span>
+                </a>
+            </div>
+            <div class="duo-box">
+                <h3>Find Your Perfect Match</h3>
+                <p>Send us the picture of your wrist.<br>
+                   We will find the best watch suitable for you!</p>
+                <a href="https://instagram.com/timeverse_official" target="_blank" class="ig-btn">
+                    <span>Send on Instagram</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+
+<section id="reviews-section">
+  <div class="reviews-header">
+    <h2>Customer Reviews</h2>
+  </div>
+  <form id="review-form">
+    <div class="star-select" id="star-select">
+      <svg class="star" data-value="1" viewBox="0 0 24 24">
+        <polygon points="12,2 15,8.8 22,9.7 17,14.3 18.2,21 12,17.8 5.8,21 7,14.3 2,9.7 9,8.8"/>
+      </svg>
+      <svg class="star" data-value="2" viewBox="0 0 24 24">
+        <polygon points="12,2 15,8.8 22,9.7 17,14.3 18.2,21 12,17.8 5.8,21 7,14.3 2,9.7 9,8.8"/>
+      </svg>
+      <svg class="star" data-value="3" viewBox="0 0 24 24">
+        <polygon points="12,2 15,8.8 22,9.7 17,14.3 18.2,21 12,17.8 5.8,21 7,14.3 2,9.7 9,8.8"/>
+      </svg>
+      <svg class="star" data-value="4" viewBox="0 0 24 24">
+        <polygon points="12,2 15,8.8 22,9.7 17,14.3 18.2,21 12,17.8 5.8,21 7,14.3 2,9.7 9,8.8"/>
+      </svg>
+      <svg class="star" data-value="5" viewBox="0 0 24 24">
+        <polygon points="12,2 15,8.8 22,9.7 17,14.3 18.2,21 12,17.8 5.8,21 7,14.3 2,9.7 9,8.8"/>
+      </svg>
+    </div>
+    <input type="text" id="reviewer-name" required placeholder="Your Name">
+    <input type="email" id="reviewer-email" required placeholder="Your Email">
+    <textarea id="review-text" required placeholder="Share your experience..."></textarea>
+    <button type="submit">Submit Review</button>
+  </form>
+  <div id="reviews-list">
+    <!-- Example reviews -->
+    <div class="review-card">
+      <div class="review-stars" data-stars="5">
+        <svg class="star filled" viewBox="0 0 24 24"><polygon points="12,2 15,8.8 22,9.7 17,14.3 18.2,21 12,17.8 5.8,21 7,14.3 2,9.7 9,8.8"/></svg>
+        <svg class="star filled" viewBox="0 0 24 24"><polygon points="12,2 15,8.8 22,9.7 17,14.3 18.2,21 12,17.8 5.8,21 7,14.3 2,9.7 9,8.8"/></svg>
+        <svg class="star filled" viewBox="0 0 24 24"><polygon points="12,2 15,8.8 22,9.7 17,14.3 18.2,21 12,17.8 5.8,21 7,14.3 2,9.7 9,8.8"/></svg>
+        <svg class="star filled" viewBox="0 0 24 24"><polygon points="12,2 15,8.8 22,9.7 17,14.3 18.2,21 12,17.8 5.8,21 7,14.3 2,9.7 9,8.8"/></svg>
+        <svg class="star filled" viewBox="0 0 24 24"><polygon points="12,2 15,8.8 22,9.7 17,14.3 18.2,21 12,17.8 5.8,21 7,14.3 2,9.7 9,8.8"/></svg>
+      </div>
+      <div class="review-text">Absolutely loved the watch! Fast shipping and great quality.</div>
+      <div class="review-meta">
+        <span class="reviewer">Ritika Sharma</span>
+        <span class="review-email">ritika@example.com</span>
+      </div>
+    </div>
+    <div class="review-card">
+      <div class="review-stars" data-stars="4">
+        <svg class="star filled" viewBox="0 0 24 24"><polygon points="12,2 15,8.8 22,9.7 17,14.3 18.2,21 12,17.8 5.8,21 7,14.3 2,9.7 9,8.8"/></svg>
+        <svg class="star filled" viewBox="0 0 24 24"><polygon points="12,2 15,8.8 22,9.7 17,14.3 18.2,21 12,17.8 5.8,21 7,14.3 2,9.7 9,8.8"/></svg>
+        <svg class="star filled" viewBox="0 0 24 24"><polygon points="12,2 15,8.8 22,9.7 17,14.3 18.2,21 12,17.8 5.8,21 7,14.3 2,9.7 9,8.8"/></svg>
+        <svg class="star filled" viewBox="0 0 24 24"><polygon points="12,2 15,8.8 22,9.7 17,14.3 18.2,21 12,17.8 5.8,21 7,14.3 2,9.7 9,8.8"/></svg>
+        <svg class="star empty" viewBox="0 0 24 24"><polygon points="12,2 15,8.8 22,9.7 17,14.3 18.2,21 12,17.8 5.8,21 7,14.3 2,9.7 9,8.8"/></svg>
+      </div>
+      <div class="review-text">Nice product. Would buy again. Support team was helpful.</div>
+      <div class="review-meta">
+        <span class="reviewer">Aman Gupta</span>
+        <span class="review-email">aman@example.com</span>
+      </div>
+    </div>
+    <div class="review-card">
+      <div class="review-stars" data-stars="3">
+        <svg class="star filled" viewBox="0 0 24 24"><polygon points="12,2 15,8.8 22,9.7 17,14.3 18.2,21 12,17.8 5.8,21 7,14.3 2,9.7 9,8.8"/></svg>
+        <svg class="star filled" viewBox="0 0 24 24"><polygon points="12,2 15,8.8 22,9.7 17,14.3 18.2,21 12,17.8 5.8,21 7,14.3 2,9.7 9,8.8"/></svg>
+        <svg class="star filled" viewBox="0 0 24 24"><polygon points="12,2 15,8.8 22,9.7 17,14.3 18.2,21 12,17.8 5.8,21 7,14.3 2,9.7 9,8.8"/></svg>
+        <svg class="star empty" viewBox="0 0 24 24"><polygon points="12,2 15,8.8 22,9.7 17,14.3 18.2,21 12,17.8 5.8,21 7,14.3 2,9.7 9,8.8"/></svg>
+        <svg class="star empty" viewBox="0 0 24 24"><polygon points="12,2 15,8.8 22,9.7 17,14.3 18.2,21 12,17.8 5.8,21 7,14.3 2,9.7 9,8.8"/></svg>
+      </div>
+      <div class="review-text">Good value for money. Delivery took a bit longer than expected.</div>
+      <div class="review-meta">
+        <span class="reviewer">Priya Mehra</span>
+        <span class="review-email">priya@example.com</span>
+      </div>
+    </div>
+  </div>
+</section>
+<script>
+// Interactive star rating for form
+const starSelect = document.getElementById('star-select');
+let selectedStars = 0;
+if (starSelect) {
+  const stars = starSelect.querySelectorAll('.star');
+  stars.forEach((star, idx) => {
+    star.addEventListener('mouseover', () => {
+      stars.forEach((s, i) => s.classList.toggle('hovered', i <= idx));
+    });
+    star.addEventListener('mouseout', () => {
+      stars.forEach((s, i) => s.classList.toggle('hovered', i < selectedStars));
+    });
+    star.addEventListener('click', () => {
+      selectedStars = idx + 1;
+      stars.forEach((s, i) => s.classList.toggle('selected', i < selectedStars));
+    });
+  });
+}
+document.getElementById('review-form').onsubmit = function(e) {
+  if (selectedStars < 1) {
+    alert('Please select your star rating!');
+    e.preventDefault();
+    return false;
+  }
+};
+</script>
+  
+    
+
+    <section id="about" class="fade-in">
+        <h2>About Us</h2>
+        <strong>Welcome to TimeVerse – Your Gateway to Iconic Timepieces, Reimagined.</strong>
+        <p>We specialize in crafting indistinguishable replicas of renowned luxury watches. Provide a photo of your
+            dream watch and we’ll deliver an exact copy with custom options!</p>
+        <p> At <strong>TimeVerse</strong>, we make luxury accessible. Our mission is simple — to provide you with
+            <strong>high-quality, visually identical replicas of your favorite luxury watches</strong> at a fraction
+            of the original price.
+        </p>
+        <p>
+            How it works? You <strong>send us a photo or name of the luxury watch you love</strong> — whether it's a
+            Rolex, Rado, Audemars Piguet, or any iconic brand — and we’ll deliver a stunning replica that looks and
+            feels just like the real thing.
+        </p>
+        <ul>
+            <li>🔹 <strong>Top-tier replica craftsmanship</strong> that captures every detail</li>
+            <li>🔹 <strong>Watches that are nearly impossible to distinguish from originals</strong></li>
+            <li>🔹 <strong>Affordable pricing</strong> without compromising design and feel</li>
+            <li>🔹 <strong>Fast & secure delivery</strong> across India</li>
+        </ul>
+        <p>
+            Whether you're a collector, enthusiast, or someone who appreciates fine timepieces —
+            <strong>TimeVerse lets you wear the look of luxury, effortlessly.</strong>
+        </p>
+        <p>
+            Luxury isn’t about price — it’s about presence.<br>Experience it with TimeVerse.
+        </p>
+    </section>
+
+    <section id="contact" class="fade-in">
+        <h2>Contact / Order</h2>
+        <p>Click “Enquire/Order” on any product, or DM us on <a href="https://instagram.com/timeverse_official"
+                target="_blank">Instagram</a>!</p>
+        <p>Contact Details:- +91-7861970037</p>
+        <div class="social-links">
+            <a href="https://instagram.com/timeverse_official" target="_blank" class="ig-link">Instagram</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 TimeVerse. All rights reserved.</p>
+    </footer>
+
+
+    <script src="main.js"></script>
+</body>
+
+</html>
