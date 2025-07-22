@@ -386,6 +386,11 @@ footer {
 }
 
 /* Discount Badge: Circular Style */
+.product-card {
+  position: relative;
+}
+
+/* Discount badge: gold, round, "cut" right edge, shadow, bold */
 .discount-badge {
   position: absolute;
   top: 14px;
@@ -399,7 +404,7 @@ footer {
   align-items: center;
   justify-content: center;
   font-weight: 900;
-  font-size: 1.1rem;
+  font-size: 1.25rem;
   box-shadow: 0 8px 18px 0 #ffd70080, 0 2px 8px 0 #ffae0080;
   z-index: 4;
   border: 2.5px solid #fff7;
@@ -409,11 +414,9 @@ footer {
   overflow: hidden;
 }
 .discount-badge::after {
-  /* Create a 'cut' edge effect on the right side */
   content: '';
   position: absolute;
-  top: 0;
-  right: -8px;
+  top: 0; right: -8px;
   width: 26px;
   height: 100%;
   background: #fff;
@@ -425,7 +428,7 @@ footer {
 .discount-badge span {
   position: relative;
   z-index: 2;
-  font-size: 1.1rem;
+  font-size: 1.07rem;
   font-weight: 900;
   font-family: 'Montserrat', 'Arial', sans-serif;
   letter-spacing: 1px;
