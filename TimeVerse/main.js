@@ -366,7 +366,7 @@ function showFeatured(products) {
         card.className = 'product-card';
         setTimeout(() => card.classList.add('visible'), 80 + idx * 60);
         card.innerHTML = `
-    ${product.discount ? `<div class="discount-badge">${product.discount} OFF</div>` : ''}
+    ${product.discount ? `<div class="discount-badge"><span>${product.discount}%</span></div>` : ''}
     ${product.limited ? `<div class="limited-badge">LIMITED EDITION</div>` : ''}
     <img src="${product.image}" alt="${product.title}" onclick="zoomImage('${product.image}')">
     <h3>${product.title}</h3>
