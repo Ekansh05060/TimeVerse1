@@ -378,3 +378,37 @@ footer {
     background: #444;
     border-radius: 20px;
 }
+.discount-badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: var(--discount-bg, #fffde7);
+  color: var(--discount-color, #d32f2f);
+  padding: 7px 20px;
+  border-radius: 40px;
+  font-weight: bold;
+  font-size: 1rem;
+  box-shadow: 0 0 18px 4px var(--discount-glow, #ffe082);
+  z-index: 2;
+  letter-spacing: 1px;
+  animation: badgeGlow 2s infinite alternate;
+  border: 1.5px solid var(--discount-color);
+}
+@keyframes badgeGlow {
+  from { box-shadow: 0 0 18px 4px var(--discount-glow); }
+  to { box-shadow: 0 0 32px 10px var(--discount-glow); }
+}
+body.day .discount-badge {
+  --discount-bg: #fffde7;
+  --discount-color: #d32f2f;
+  --discount-glow: #ffe082;
+}
+body.night .discount-badge {
+  --discount-bg: #212121;
+  --discount-color: #ffd600;
+  --discount-glow: #ffab00;
+}
+/* Ensure card is relative for badge positioning */
+.watch-card {
+  position: relative;
+}
