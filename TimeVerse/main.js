@@ -366,13 +366,13 @@ function showFeatured(products) {
         card.className = 'product-card';
         setTimeout(() => card.classList.add('visible'), 80 + idx * 60);
         card.innerHTML = `
-             ${watch.discount ? `<div class="discount-badge">${watch.discount} OFF</div>` : ''}
-            <img src="${product.image}" alt="${product.title}" onclick="zoomImage('${product.image}')">
-            <h3>${product.title}</h3>
-            <div class="price">&#8377;${product.price}</div>
-            <p>${product.description}</p>
-            <button class="enquire-btn" onclick="enquireProduct('${product.id}','${product.title}')">Enquire / Order</button>
-        `;
+    ${product.discount ? `<div class="discount-badge">${product.discount} OFF</div>` : ''}
+    <img src="${product.image}" alt="${product.title}" onclick="zoomImage('${product.image}')">
+    <h3>${product.title}</h3>
+    <div class="price">&#8377;${product.price}</div>
+    <p>${product.description}</p>
+    <button class="enquire-btn" onclick="enquireProduct('${product.id}','${product.title}')">Enquire / Order</button>
+`;
         featuredGrid.appendChild(card);
     });
 }
