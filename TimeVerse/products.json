@@ -154,7 +154,8 @@
         "image": "images/Buggati-chiron-turbillon.jpg",
         "price": "3699",
         "discount": "68%",
-        "featured": true
+        "featured": true,
+        "limited": true
     },
     {
         "id": "CW-020",
@@ -163,6 +164,7 @@
         "image": "images/ram_janmbhoomi.jpg",
         "price": "3899",
          "discount": "49%",
-        "featured": true
+        "featured": true,
+        "limited": true
     }
 ]
