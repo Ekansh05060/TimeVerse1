@@ -347,6 +347,7 @@ function renderWatches() {
         setTimeout(() => card.classList.add('visible'), 70 + idx * 55);
         card.innerHTML = `
       ${watch.discount ? `<div class="discount-badge">${watch.discount} OFF</div>` : ''}
+       ${product.limited ? `<div class="limited-badge">LIMITED EDITION</div>` : ''}
       <img src="${watch.image}" alt="${watch.title}" onclick="zoomImage('${watch.image}')">
       <h3>${watch.title}</h3>
       <div class="price">&#8377;${watch.price}</div>
